@@ -1,0 +1,244 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: 100%;
+
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  padding: 40px 0;
+  width: 100%;
+}
+
+/* Dropdown Button */
+
+.dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1050px;
+  width: 100%;
+  margin: auto;
+  padding: 0 15px;
+
+  &__block {
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+  }
+
+  &__block:hover .dropdown__content {
+    display: block;
+  }
+
+  &__block:hover .dropbtn {
+    background-color: #854392;
+  }
+
+  &__content {
+    display: none;
+    position: absolute;
+    background-color: #eadcfc;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+
+    & a {
+      color: black;
+      font-size: 18px;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    & a:hover {
+      background-color: #da91da;
+    }
+  }
+
+}
+
+.dropbtn {
+  background-color: #c993ec;
+  color: black;
+  padding: 25px;
+  font-size: 24px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+
+// Checkbox menu
+
+.checkbox {
+  margin: 150px 15px;
+}
+
+
+.burger-input {
+  top: 0;
+  left: 0;
+  opacity: 0;
+  width: 100%;
+  height: 45px;
+  cursor: pointer;
+  position: absolute;
+}
+.burger-input + label {
+  width: 30px;
+  display: block;
+  margin: 0 auto;
+  padding: 10px 0;
+  cursor: pointer;
+  position: relative;
+}
+.burger-input + label:after, .burger-input + label:before,
+.burger-input + label .burger {
+  content: '';
+  width: 25px;
+  height: 4px;
+  display: block;
+  margin: 3px auto;
+  border-radius: 3px;
+  background-color: #1c5081;
+  transition: all 200ms ease-in-out;
+}
+.burger-input:checked + label {
+  top: 4px;
+}
+.burger-input:checked + label:before {
+  transform: translateY(2px) rotate(135deg);
+}
+.burger-input:checked + label:after {
+  transform: translateY(-12px) rotate(-135deg);
+}
+.burger-input:checked + label .burger {
+  transform: scale(0);
+}
+.burger-input:checked ~ nav {
+  display: block;
+}
+.burger-input:checked ~ nav li {
+  display: block;
+  text-align: center;
+}
+
+.checkbox__block {
+  display: none;
+}
+
+.checkbox__links {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+  text-align: center;
+}
+ul a {
+  display: block;
+  padding: 10px 0;
+  color: #ffffff;
+  background-color: #6281d8;
+  transition: background-color 250ms ease-in-out;
+  font-size: 20px;
+
+}
+ul a:hover {
+  background-color: #7691dd;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+
+
+// Animation
+
+.animation {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.square__animation {
+  width: 50px;
+  height: 50px;
+  background: #d280d8;
+
+  animation-duration: 3s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: calc(100% - 50px);
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
+
+.square__transition {
+  width: 50px;
+  height: 50px;
+  background: #d280d8;
+
+  animation-duration: 3s;
+  animation-name: transition-animation;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+
+@keyframes transition-animation {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(100vw - 100px));
+  }
+}
+
+.square {
+  width: 120px;
+  height: 120px;
+  background: #477AB9;
+  position: absolute;
+
+}
+
+
+.square__settimeout {
+  height: 120px;
+  position: relative
+}
+
+.square-animation-frame {
+  position: relative
+}
+
+.button {
+  background-color: yellow;
+}
