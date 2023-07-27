@@ -1,12 +1,22 @@
 {
-    "compilerOptions": {
-      "outDir": "./dist/",
-      "sourceMap": true,
-      "noImplicitAny": true,
-      "module": "es6",
-      "target": "es5",
-      "jsx": "react",
-      "allowJs": true,
-      "moduleResolution": "node"
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": true, //нельзя использование неявных any
+    "module": "ES2020",
+    "target": "ES2016",
+    "jsx": "react",
+    "allowJs": true,
+    "moduleResolution": "node",
+
+    "allowUnreachableCode": false,
+    "allowSyntheticDefaultImports": true,
+    "alwaysStrict": true,
+    "noImplicitOverride": true,
+    "noUnusedParameters": true,
+    "baseUrl": "src",
+    "paths": {
+      "assets/*": ["assets/*"]
     }
-}  
+  }
+}
